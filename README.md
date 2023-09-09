@@ -1,4 +1,4 @@
-<div align="center">
-  <h1>Coding Challenges</h1>
-</div>
-<h4>This repository contains my solutions to problems in JavaScript from Yandex's course on algorithms and data structures.</h4>
+# Coding Challenges
+![JavaScript](https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E)
+
+#### This repository contains my solutions to problems in JavaScript from Yandex's course on algorithms and data structures.
