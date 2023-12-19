@@ -5,7 +5,7 @@
 ## Use
 To run the solution code, you need to enter the following in the command line:
 ```
-cat input.txt | node.exe solution.js > output.txt
+node solution.js
 ```
 Note that the files solution.js, input.txt, and output.txt should be located in the same directory.
 ## Contents
