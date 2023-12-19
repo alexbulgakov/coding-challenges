@@ -16,32 +16,24 @@ Input: 8 2 9 -10
 Output: 40
 */
 
-const _readline = require('readline');
-
-const _reader = _readline.createInterface({
-    input: process.stdin
-});
-
-const _inputLines = [];
-let _curLine = 0;
-
-_reader.on('line', line => {
-    _inputLines.push(line)
-});
-
-process.stdin.on('end', solve);
+const fs = require('fs');
+const inputLines = fs.readFileSync('input.txt', 'utf-8').split('\n');
 
 function evaluateFunction(x, a, b, c) {
     return a * x * x + b * x + c;
 }
 
-function solve() {
-    const [a, x, b, c] = readArray();
-    process.stdout.write(`${evaluateFunction(x, a, b, c)}`);
+function solve(inputLines) {
+    const [a, x, b, c] = readArray(inputLines);
+
+    return `${evaluateFunction(x, a, b, c)}`;
 }
 
-function readArray() {
-    const arr = _inputLines[_curLine].trim(' ').split(' ').map(num => Number(num));
-    _curLine++;
+function readArray(inputLines) {
+    const arr = inputLines[0].trim(' ').split(' ').map(num => Number(num));
+    
     return arr;
 }
+
+const output = solve(inputLines);
+fs.writeFileSync('output.txt', output);
