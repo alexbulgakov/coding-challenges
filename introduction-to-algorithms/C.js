@@ -9,7 +9,7 @@ function readInt() {
 }
 
 function readArray() {
-    const arr = inputLines[curLine].trim(' ').split(' ').map(num => Number(num));
+    const arr = inputLines[curLine].trim().split(' ').map(num => Number(num));
     curLine++;
     return arr;
 }
